@@ -342,7 +342,7 @@ Load the dataset and install necessary libraries:
   %pip install chromadb
   %pip install open-clip-torch
 ```
-###2. Convert Images to Embeddings
+### 2. Convert Images to Embeddings
 Create image embeddings using OpenCLIP:
 ```python
   import os
@@ -387,10 +387,9 @@ Add image embeddings to a collection and perform a search using L2 similarity:
   l2_results = search(image_path=test_path, collection=l2_collection, n_results=5)
   plot_results(image_path=test_path, files_path=files_path, results=l2_results)
 ```
-  ###3.2 Query Images with Cosine Similarity Collection
+  ### 3.2 Query Images with Cosine Similarity Collection
   Add image embeddings to a collection and perform a search using Cosine similarity:
 ```python
-Sao chép mã
 # Create and populate Cosine collection
 cosine_collection = chroma_client.get_or_create_collection(name="Cosine_collection", metadata={"HNSW_SPACE": "cosine"})
 add_embedding(collection=cosine_collection, files_path=files_path)
